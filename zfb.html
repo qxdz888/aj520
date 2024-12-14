@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悬浮通讯栏示例</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="floating-bar">
+        <div class="contact-item" id="qq-contact">
+            <img src="qq-icon.png" alt="QQ图标">
+            <div class="tooltip">点击添加QQ好友</div>
+        </div>
+        <div class="contact-item" id="wechat-contact">
+            <img src="wechat-icon.png" alt="微信图标">
+            <div class="tooltip">点击展示微信二维码</div>
+            <div class="qrcode" id="wechat-qrcode">
+                <img src="wechat-qrcode.png" alt="微信二维码">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

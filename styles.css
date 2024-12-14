@@ -1,0 +1,27 @@
+.wechat-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.wechat-icon {
+    width: 50px; /* 根据实际图标大小调整 */
+    height: 50px; /* 根据实际图标大小调整 */
+    cursor: pointer; /* 鼠标悬停时显示手形图标 */
+}
+
+.wechat-qrcode {
+    position: absolute;
+    top: 60px; /* 根据需要调整二维码显示的位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* 根据实际二维码大小调整 */
+    height: 150px; /* 根据实际二维码大小调整 */
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: none; /* 初始隐藏 */
+}
+
+.wechat-icon-container:hover .wechat-qrcode {
+    opacity: 1;
+    display: block; /* 鼠标悬停时显示二维码 */
+}
