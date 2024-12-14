@@ -1,27 +1,63 @@
-.wechat-icon-container {
-    position: relative;
-    display: inline-block;
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.wechat-icon {
-    width: 50px; /* 根据实际图标大小调整 */
-    height: 50px; /* 根据实际图标大小调整 */
-    cursor: pointer; /* 鼠标悬停时显示手形图标 */
+nav {
+    background-color: #333;
+    color: white;
 }
 
-.wechat-qrcode {
-    position: absolute;
-    top: 60px; /* 根据需要调整二维码显示的位置 */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px; /* 根据实际二维码大小调整 */
-    height: 150px; /* 根据实际二维码大小调整 */
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: none; /* 初始隐藏 */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
-.wechat-icon-container:hover .wechat-qrcode {
-    opacity: 1;
-    display: block; /* 鼠标悬停时显示二维码 */
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+.content-section {
+    padding: 20px;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-item {
+    flex: 1 0 23%; /* 确保每行4个图片 */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .image-item {
+        flex: 1 0 100%; /* 在小屏幕设备上每行1个图片 */
+    }
 }
