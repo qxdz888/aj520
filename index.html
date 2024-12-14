@@ -3,207 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一起撸移动吧</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            display: flex;
-            background-color: #333;
-            overflow: hidden;
-        }
-        .navbar a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-		
-		        .announcement-bar {
-            background-color: #f8d7da; /* 背景色，可以根据需要更改 */
-            color: #721c24; /* 文字颜色，可以根据需要更改 */
-            padding: 10px 20px; /* 内边距 */
-            margin-bottom: 20px; /* 外边距，用于与下方内容分隔 */
-            border-left: 10px solid #f5c6cb; /* 左侧边框，可以根据需要更改 */
-            font-size: 20px; /* 字体大小 */
-			font-weight: bold;
-        }
-        .announcement-bar strong {
-            font-size: 25px; /* 强调文字的字体大小 */
-        }
-		/* 定义容器样式，限制最大宽度为页面的一半，并设置网格布局 */
-    .container {
-        display: grid;
-        /* 横向设置三个网格，每个网格将自动调整到合适的宽度 */
-        grid-template-columns: repeat(3, 1fr);
-        /* 设置网格项之间的间隙 */
-        grid-gap: 10px;
-        /* 设置容器的最大宽度为50%，以便它占据页面的一半 */
-        max-width: 85%;
-        /* 让容器在页面中居中 */
-        margin: auto;
-        /* 可以选择添加一些内边距来美化外观 */
-        padding: 10px;
-        /* 为了更清楚地看到容器的边界（可选） */
-        border: 2px solid #ccc;
-    }
-
-    /* 定义网格项的样式 */
-    .link {
-        /* 文本居中 */
-        text-align: center;
-        /* 内边距 */
-        padding: 10px;
-        /* 背景颜色 */
-        background-color: #aabaaa;
-    }
-	
-	
-	
-	 /* ... (之前的样式保持不变) ... */
-
-        /* 添加对话框样式 */
-        #qrcodeDialog {
-            display: none; /* 初始隐藏 */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-            background-color: white;
-            border: 2px solid #333;
-            width: 250px; /* 设置对话框宽度 */
-            max-width: 90%; /* 在小屏幕上最大宽度 */
-            height: auto; /* 高度自适应内容 */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        #qrcodeDialog img {
-            max-width: 100%;
-            height: auto;
-        }
-        #closeDialog {
-            cursor: pointer;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            color: #333;
-            font-weight: bold;
-        }
-        /* 添加背景点击关闭样式（可选） */
-        .dialog-overlay {
-            display: none; /* 初始隐藏 */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-	
-    </style>
+    <title>自适应网站</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="/index.html">主页</a>
-        <a href="/ydqy/index.php">刷消费保底</a>
-        <a href="/hd.html">移动活动</a>
-        <a href="/ym.html">羊毛活动</a>
-			<a href="http://u.f2url.com/h1ESAF">线报已更新</a>
-    </div>
-<H1>10086.000.pe   一起来撸移动吧</H1>
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#page1">页面1</a></li>
+            <li><a href="#page2">页面2</a></li>
+            <li><a href="#page3">页面3</a></li>
+            <li><a href="#page4">页面4</a></li>
+        </ul>
+    </nav>
 
-</head>
-<body>
+    <section id="home">
+        <h1>欢迎来到首页</h1>
+    </section>
 
-<div class="announcement-bar">
-    <strong>公告：</strong> 由于个人网络原因访问app的时候比较慢，于是自己收藏常用链接作为备用。
-各位看到此页面的小伙伴，请正常合理参与活动和及时退订相关业务，以免触犯法律和造成财产损失。
-</div>
+    <section id="page1" class="content-section">
+        <h2>页面1</h2>
+        <div class="image-grid">
+            <!-- 图片和描述重复100次 -->
+            <div class="image-item">
+                <img src="image1.jpg" alt="图片1">
+                <p>图片1的描述</p>
+            </div>
+            <!-- 重复上述div 99次，或使用服务器端渲染或JS生成 -->
+        </div>
+    </section>
 
-<head>
-  <title>三排四列超链接网页</title>
+    <section id="page2" class="content-section">
+        <h2>页面2</h2>
+        <div class="image-grid">
+            <!-- 图片和描述重复100次 -->
+            <div class="image-item">
+                <img src="image2.jpg" alt="图片2">
+                <p>图片2的描述</p>
+            </div>
+            <!-- 重复上述div 99次 -->
+        </div>
+    </section>
 
+    <section id="page3" class="content-section">
+        <h2>页面3</h2>
+        <div class="image-grid">
+            <!-- 图片和描述重复100次 -->
+            <div class="image-item">
+                <img src="image3.jpg" alt="图片3">
+                <p>图片3的描述</p>
+            </div>
+            <!-- 重复上述div 99次 -->
+        </div>
+    </section>
 
-</head>
-<body>
-
-  <div class="container">
-    <div class="link">
-      <a href="/ydqy/index.php" target="_blank">贵州移动话费兑换各种立减金</a>
-    </div>
-    <div class="link">
-      <a href="/hd.html" target="_blank">贵州移动活动【含链接】</a>
-    </div>
-    <div class="link">
-      <a href="https://mpf.tuopukeji.cn/interestList" target="_blank">///领取电费///</a>
-    </div>
-    <div class="link">
-      <a href="/bdsj.html" target="_blank">保底套手机攻略</a>
-    </div>
-    <div class="link">
-     <a href="https://etax.guizhou.chinatax.gov.cn:19001/h5/#/pages/sbjf/index?data=04b43e5dbd5b1900f1c980572ead6de4c3c10ff7873371102e988ba71c4529d2655abb30a20165101cc7ef073ad7dbcebebede1769b8922ed5382067546e34b58bb3750c45aa17b26d97f9c93a6f3a435984533192cc8f8ce0469ec6b31fe7d127b4f238a840c5aae18c8e885f8d2c3363b470befffe66e522bd3179eca92e8b6ac7591d287666ad5ed9ff6b46eb4012cded05a382400fbec2e334ef7a8b927d17156e8b1dcf445bbe07dc26562c2f077c0e79445f03d95824d38e" target="_blank">贵州社保缴纳状态查询：输入身份证，点击订单查询</a>
-    </div>
-    <div class="link">
-      <a href="https://wap.gz.10086.cn/activityWeb/static/templet/act/index.html?actId=N2KEQ0&ChannelPosition=SZQW6350&referChannels=EB060&referee=a8IZqYnoh3d9K0qEaEYhjQ%3D%3D&assistantUserInfo=IgxeCo%2FFWkrQk%2B3fCGxp%2FiIcysJoUhESHku%2B2S5b3x6UZajqbqf6jIejbjbEDItb9fuJDhJVq4GjFOiZPuK23IsoJXjx2LgxdkIs%2F3seIYsXXasVaWtVRdvNQ0NAJCqCFkoFBLwMxBEKSFb2No9GuA%3D%3D" target="_blank">贵州用户10元买2张29元的瑞幸咖啡券私我回本14</a>
-    </div>
-    <div class="link">
-     <a href="https://wap.gz.10086.cn/waps/static/activity/apRightPlatform/rights_index_details.html?id=013fb527dd1849c09b3b92d0d6a5efb3" target="_blank">医保399连接</a>
-    </div>
-    <div class="link">
-     <a href="https://wap.gz.10086.cn/waps/static/activity/apRightPlatform/rights_index_details.html?id=56ef88c8d1fd43e29244bdacce5af92c" target="_blank">医保1197连接</a>
-    </div>
-    <div class="link">
-      <a href="https://zt60.cn/r52B9" target="_blank">失效状态</a>
-    </div>
-    <div class="link">
-     <a href="https://s.c1ns.cn/j3nVl" target="_blank">新青年瑞幸领取小程序直达链接</a>
-    </div>
-    <div class="link">
-     <a href="https://hk.yunhaoka.cn/#/pages/micro_store/index?agent_id=2cfd27721cb950ecb967e505d8255dd7" target="_blank">三大运营商正规超大流量卡</a>
-    </div>
-    <div class="link">
-      <a href="https://hk.yunhaoka.cn/#/pages/micro_store/index?agent_id=2cfd27721cb950ecb967e505d8255dd7" target="_blank">三大运营商正规超大流量卡</a>
-    </div>
-  </div>
-</body>
-</html>
-<body>
-    
-    <div class="bottom-text">
-        <h2>感谢您的浏览，转账0.88是自动发码哈，不要弄错了 转多了不退，一定是0.88切记</h2>
-        <p>加微信，记得转账0.88元  是转账哈，我就是如此的贪财多一分少一分都不行哈</p>
-        <a href="#" onclick="showQrcodeDialog(); return false;">点击这里加微信，记得转账0.88元</a>
-    </div>
-
-    <!-- 二维码对话框 -->
-    <div id="qrcodeDialog">
-        <span id="closeDialog" onclick="closeQrcodeDialog()">&times;</span>
-        <img src="weixin.jpg" alt="微信二维码">
-    </div>
-    <!-- 背景点击关闭层（可选） -->
-    <div class="dialog-overlay" onclick="closeQrcodeDialog()"></div>
-
-    <script>
-        function showQrcodeDialog() {
-            document.getElementById('qrcodeDialog').style.display = 'block';
-            document.getElementById('dialog-overlay').style.display = 'block'; // 如果使用背景点击关闭层，则取消注释这行
-        }
-
-        function closeQrcodeDialog() {
-            document.getElementById('qrcodeDialog').style.display = 'none';
-            document.getElementById('dialog-overlay').style.display = 'none'; // 如果使用背景点击关闭层，则取消注释这行
-        }
-    </script>
+    <section id="page4" class="content-section">
+        <h2>页面4</h2>
+        <div class="image-grid">
+            <!-- 图片和描述重复100次 -->
+            <div class="image-item">
+                <img src="image4.jpg" alt="图片4">
+                <p>图片4的描述</p>
+            </div>
+            <!-- 重复上述div 99次 -->
+        </div>
+    </section>
 </body>
 </html>
