@@ -3,70 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自适应网站</title>
+    <title>首页</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#home">首页</a></li>
-            <li><a href="#page1">页面1</a></li>
-            <li><a href="#page2">页面2</a></li>
-            <li><a href="#page3">页面3</a></li>
-            <li><a href="#page4">页面4</a></li>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="pages/page1.html">页面1</a></li>
+            <li><a href="pages/page2.html">页面2</a></li>
+            <li><a href="pages/page3.html">页面3</a></li>
+            <li><a href="pages/page4.html">页面4</a></li>
         </ul>
     </nav>
-
-    <section id="home">
-        <h1>欢迎来到首页</h1>
-    </section>
-
-    <section id="page1" class="content-section">
-        <h2>页面1</h2>
-        <div class="image-grid">
-            <!-- 图片和描述重复100次 -->
-            <div class="image-item">
-                <img src="image1.jpg" alt="图片1">
-                <p>图片1的描述</p>
-            </div>
-            <!-- 重复上述div 99次，或使用服务器端渲染或JS生成 -->
-        </div>
-    </section>
-
-    <section id="page2" class="content-section">
-        <h2>页面2</h2>
-        <div class="image-grid">
-            <!-- 图片和描述重复100次 -->
-            <div class="image-item">
-                <img src="image2.jpg" alt="图片2">
-                <p>图片2的描述</p>
-            </div>
-            <!-- 重复上述div 99次 -->
-        </div>
-    </section>
-
-    <section id="page3" class="content-section">
-        <h2>页面3</h2>
-        <div class="image-grid">
-            <!-- 图片和描述重复100次 -->
-            <div class="image-item">
-                <img src="image3.jpg" alt="图片3">
-                <p>图片3的描述</p>
-            </div>
-            <!-- 重复上述div 99次 -->
-        </div>
-    </section>
-
-    <section id="page4" class="content-section">
-        <h2>页面4</h2>
-        <div class="image-grid">
-            <!-- 图片和描述重复100次 -->
-            <div class="image-item">
-                <img src="image4.jpg" alt="图片4">
-                <p>图片4的描述</p>
-            </div>
-            <!-- 重复上述div 99次 -->
-        </div>
-    </section>
+    <div class="search-container">
+        <input type="text" placeholder="搜索...">
+    </div>
+    <div class="image-grid">
+        <!-- 默认图片展示 -->
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
