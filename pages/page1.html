@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Search</title>
+    <title>Responsive Image Gallery with Search and Navigation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search...">
-        <button id="search-button">Search</button>
-    </div>
-    
-    <div id="results-container" class="results-container"></div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#gallery">画廊</a></li>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </nav>
 
+    <!-- 搜索栏 -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜索图片...">
+        <button id="search-button">搜索</button>
+    </div>
+
+    <!-- 画廊容器 -->
+    <div class="gallery" id="gallery-section">
+        <div class="gallery-item" data-description="Image 1 Description">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item" data-description="Image 2 Description">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="gallery-item" data-description="Image 3 Description">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <!-- 添加更多图片项 -->
+    </div>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
