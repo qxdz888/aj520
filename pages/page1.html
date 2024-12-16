@@ -1,31 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面1</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Image Search</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">首页</a></li>
-            <li><a href="page1.html">aj1</a></li>
-            <li><a href="page2.html">页面2</a></li>
-            <li><a href="page3.html">页面3</a></li>
-            <li><a href="page4.html">页面4</a></li>
-        </ul>
-    </nav>
     <div class="search-container">
-        <input type="text" placeholder="搜索...">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button id="search-button">Search</button>
     </div>
-   
-      <div class="image-grid">
-    <img src="1001.jpg" alt="这是一个微信">
-    <img src="images/specific-image2.jpg" alt="描述性的文本2">
-    <!-- ... 更多图片 ... -->
+    
+    <div id="results-container" class="results-container"></div>
 
-        <script src="../script.js"></script>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
