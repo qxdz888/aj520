@@ -1,0 +1,74 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* 搜索栏样式 */
+.search-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* 画廊容器样式 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 画廊项样式 */
+.gallery-item {
+    margin: 10px;
+    box-sizing: border-box;
+    width: calc(25% - 20px); /* 一排四个 */
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px); /* 一排两个 */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* 一排一个 */
+    }
+}
