@@ -1,0 +1,76 @@
+{
+    font-familyArialsans-serif
+    margin0
+    padding0
+}
+
+{
+    background-color
+    colorwhite
+    padding10px 0
+}
+
+{
+    list-style-typenone
+    margin0
+    padding0
+    displayflex
+    justify-contentcenter
+}
+
+{
+    margin0 15px
+}
+
+{
+    colorwhite
+    text-decorationnone
+}
+
+{
+    text-aligncenter
+    margin20px 0
+}
+
+{
+    text-aligncenter
+}
+
+{
+    displayflex
+    flex-wrapwrap
+    justify-contentcenter
+    padding20px
+}
+
+{
+    width100%
+    max-width250px
+    margin10px
+    border-radius5px
+}
+
+/* 响应式设计 */
+@media (min-width1024px) {
+{
+        displaygrid
+        grid-template-columnsrepeat()
+        gap10px
+    }
+}
+
+@media (max-width1023px)(min-width768px) {
+{
+        displaygrid
+        grid-template-columnsrepeat()
+        gap10px
+    }
+}
+
+@media (max-width767px) {
+{
+        displaygrid
+        grid-template-columnsrepeat()
+        gap10px
+    }
+}
