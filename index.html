@@ -125,7 +125,7 @@
       position: absolute;
       top: 80px;
       right: 20px;
-      width: 240px;
+      width: 210px;
       background: #1a1a1a;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 16px;
@@ -164,6 +164,19 @@
       margin-bottom: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* 导航弹窗二维码 */
+    .nav-popup-qr {
+      width: 160px;
+      height: 160px;
+      border-radius: 10px;
+      background: #fff;
+      padding: 6px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 12px;
     }
 
     .nav-popup-id {
@@ -183,10 +196,10 @@
       justify-content: center;
     }
 
-    .nav-popup-icon svg {
+    .nav-popup-icon img {
       width: 22px;
       height: 22px;
-      fill: #fff;
+      object-fit: contain;
     }
 
     .nav-popup-id span {
@@ -267,10 +280,10 @@
       color: #fff;
     }
 
-    .bottom-bar-item svg {
+    .bottom-bar-item img {
       width: 20px;
       height: 20px;
-      fill: currentColor;
+      object-fit: contain;
     }
 
     .bottom-bar-wechat {
@@ -291,14 +304,12 @@
       color: #fff;
       font-weight: 600;
     }
-
-    /* 底部栏弹出的微信卡片 */
     .bottom-wechat-popup {
       position: absolute;
       bottom: 75px;
       left: 50%;
       transform: translateX(-50%) translateY(10px);
-      width: 220px;
+      width: 210px;
       background: #1a1a1a;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 16px;
@@ -336,6 +347,18 @@
       margin-bottom: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
+    }
+
+    /* 底部弹窗二维码 */
+    .bottom-popup-qr {
+      width: 160px;
+      height: 160px;
+      border-radius: 10px;
+      background: #fff;
+      padding: 6px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 12px;
     }
 
     .bottom-popup-id {
@@ -576,19 +599,22 @@
       max-width: 90%;            /* 最大宽度90% */
       max-height: 90%;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     /* 弹窗内的大图 */
     .modal-image {
       max-width: 100%;
-      max-height: 80vh;          /* 最大高度80%的视口高度 */
+      max-height: 55vh;          /* 最大高度55%的视口高度，给联系区留空间 */
       border-radius: 12px;
       display: block;
     }
 
     .modal-info {
       text-align: center;
-      margin-top: 24px;
+      margin-top: 20px;
     }
 
     .modal-name {
@@ -601,6 +627,82 @@
       font-size: 28px;
       font-weight: 800;
       color: #fff;
+    }
+
+    /* 弹窗内的咨询购买区域 */
+    .modal-contact {
+      margin-top: 24px;
+      background: #1a1a1a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      width: 240px;
+    }
+
+    .modal-contact-title {
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* 二维码图片样式 */
+    .modal-qr {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      background: #fff;          /* 白色背景让二维码更清晰 */
+      padding: 8px;             /* 周围留白 */
+      object-fit: contain;
+    }
+
+    .modal-wechat-label {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .modal-wechat-id {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      word-break: break-all;
+    }
+
+    /* 复制按钮 */
+    .modal-copy-btn {
+      width: 100%;
+      padding: 12px;
+      background: #07c160;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .modal-copy-btn:hover {
+      background: #06ad56;
+    }
+
+    .modal-copy-btn.copied {
+      background: #333;
+    }
+
+    .modal-copy-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
     }
 
     /* 弹窗关闭按钮 */
@@ -631,152 +733,7 @@
       color: #666;
     }
 
-    /* ============================
-       10. 右下角悬浮联系按钮（选项D）
-       ============================ */
-    .contact-float {
-      position: fixed;           /* 固定在页面右下角 */
-      bottom: 30px;
-      right: 30px;
-      z-index: 999;             /* 位于内容之上，弹窗之下 */
-    }
-
-    /* 联系按钮本体（圆形按钮） */
-    .contact-btn {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;       /* 圆形 */
-      background: linear-gradient(135deg, #07c160 0%, #06ad56 100%); /* 微信绿 */
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(7, 193, 96, 0.4); /* 绿色阴影 */
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .contact-btn:hover {
-      transform: scale(1.1);    /* 鼠标悬停放大 */
-      box-shadow: 0 6px 30px rgba(7, 193, 96, 0.5);
-    }
-
-    /* 微信图标（SVG） */
-    .contact-btn svg {
-      width: 30px;
-      height: 30px;
-      fill: #fff;
-    }
-
-    /* 联系卡片（弹出的信息框） */
-    .contact-card {
-      position: absolute;
-      bottom: 75px;              /* 在按钮上方弹出 */
-      right: 0;
-      width: 220px;
-      background: #1a1a1a;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 20px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px); /* 初始状态：向下偏移 */
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    /* 显示联系卡片 */
-    .contact-card.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    /* 箭头（卡片下方的小三角） */
-    .contact-card::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      right: 20px;
-      width: 14px;
-      height: 14px;
-      background: #1a1a1a;
-      border-right: 1px solid rgba(255, 255, 255, 0.1);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      transform: rotate(45deg);
-    }
-
-    .contact-card-title {
-      font-size: 12px;
-      color: #888;
-      margin-bottom: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .contact-card-id {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .contact-wechat-icon {
-      width: 32px;
-      height: 32px;
-      background: #07c160;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-wechat-icon svg {
-      width: 20px;
-      height: 20px;
-      fill: #fff;
-    }
-
-    .contact-id-text {
-      font-size: 18px;
-      font-weight: 700;
-      color: #fff;
-      word-break: break-all;
-    }
-
-    /* 复制按钮 */
-    .contact-copy {
-      width: 100%;
-      padding: 10px;
-      background: #07c160;
-      border: none;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .contact-copy:hover {
-      background: #06ad56;
-    }
-
-    .contact-copy.copied {
-      background: #333;
-    }
-
-    .contact-copy svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
+    /* 右下角悬浮按钮已移除 */
 
     /* ============================
        11. 响应式设计（适配手机/平板）
@@ -828,27 +785,6 @@
 
       .section-header {
         margin-top: 30px;
-      }
-
-      /* 联系按钮在手机上缩小一点 */
-      .contact-float {
-        bottom: 20px;
-        right: 20px;
-      }
-
-      .contact-btn {
-        width: 52px;
-        height: 52px;
-      }
-
-      .contact-btn svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .contact-card {
-        width: 200px;
-        right: -10px;
       }
 
       /* 顶部联系按钮在手机上隐藏（用底部栏代替） */
@@ -930,12 +866,14 @@
         <button class="nav-contact" onclick="toggleNavContact()">联系购买</button>
         <!-- 顶部联系卡片弹窗 -->
         <div class="nav-contact-popup" id="navContactPopup">
-          <p class="nav-popup-title">添加客服微信</p>
+          <p class="nav-popup-title">扫码添加微信</p>
+          <!-- 微信二维码 -->
+          <img class="nav-popup-qr" src="wechat-qr.png" alt="微信二维码">
           <div class="nav-popup-id">
             <div class="nav-popup-icon">
-              <svg viewBox="0 0 24 24"><path d="M8.5 13.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm5.5 2c1.5 0 2.8.5 3.8 1.3l-3.3 2.9c-.3.3-.8.4-1.2.3-.5-.2-1-.4-1.5-.6-.3.8-.9 1.5-1.6 2l-1.1-2c2-.5 4-.8 5.9-.8zM3 20l4.5-4c-.7-.8-1.1-1.8-1.1-3 0-2.2 1.8-4 4-4 .6 0 1.1.1 1.6.3L10 8.5C9 7.6 7.7 7 6.3 7 4.1 7 2.3 8.8 2.3 11c0 1.5.8 2.8 2.1 3.6L3 20z"/></svg>
+              <img src="wechat-icon.png" alt="微信">
             </div>
-            <span id="navWechatId">ABC</span>
+            <span id="navWechatId">xdq880406</span>
           </div>
           <button class="nav-popup-btn" id="navCopyBtn" onclick="copyNavWechat()">
             <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
@@ -976,6 +914,24 @@
         <h2 class="modal-name" id="modalName"></h2>
         <p class="modal-price" id="modalPrice"></p>
       </div>
+      <!-- 咨询购买区域：二维码 + 微信ID + 复制按钮 -->
+      <div class="modal-contact">
+        <p class="modal-contact-title">扫码联系客服</p>
+        <!--
+          二维码图片：
+          把 src 改成你自己的微信二维码图片地址
+          支持本地路径（如 wechat-qr.png）或网络图片地址
+        -->
+        <img class="modal-qr" id="modalQr" src="wechat-qr.png" alt="微信二维码">
+        <!-- 微信ID（和右侧弹窗共用同一个ID，复制功能通用） -->
+        <p class="modal-wechat-label">微信号</p>
+        <p class="modal-wechat-id" id="wechatId">xdq880406</p>
+        <!-- 复制按钮 -->
+        <button class="modal-copy-btn" onclick="copyWechat()">
+          <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          复制微信号
+        </button>
+      </div>
     </div>
   </div>
 
@@ -985,56 +941,21 @@
   <div class="bottom-bar" id="bottomBar">
     <!-- 微信咨询 -->
     <div class="bottom-bar-item bottom-bar-wechat" onclick="toggleBottomWechat()">
-      <svg viewBox="0 0 24 24"><path d="M8.5 13.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm5.5 2c1.5 0 2.8.5 3.8 1.3l-3.3 2.9c-.3.3-.8.4-1.2.3-.5-.2-1-.4-1.5-.6-.3.8-.9 1.5-1.6 2l-1.1-2c2-.5 4-.8 5.9-.8zM3 20l4.5-4c-.7-.8-1.1-1.8-1.1-3 0-2.2 1.8-4 4-4 .6 0 1.1.1 1.6.3L10 8.5C9 7.6 7.7 7 6.3 7 4.1 7 2.3 8.8 2.3 11c0 1.5.8 2.8 2.1 3.6L3 20z"/></svg>
+      <img src="wechat-icon.png" alt="微信">
       <span>微信咨询</span>
     </div>
 
     <!-- 底部微信弹窗 -->
     <div class="bottom-wechat-popup" id="bottomWechatPopup">
-      <p class="bottom-popup-title">添加客服微信</p>
-      <p class="bottom-popup-id" id="bottomWechatId">ABC</p>
+      <p class="bottom-popup-title">扫码添加微信</p>
+      <!-- 微信二维码 -->
+      <img class="bottom-popup-qr" src="wechat-qr.png" alt="微信二维码">
+      <p class="bottom-popup-id" id="bottomWechatId">xdq880406</p>
       <button class="bottom-popup-btn" id="bottomCopyBtn" onclick="copyBottomWechat()">
         <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
         复制微信号
       </button>
     </div>
-
-    <div class="bottom-bar-divider"></div>
-
-    <!-- 电话 -->
-    <div class="bottom-bar-item bottom-bar-phone">
-      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-      <span>电话联系</span>
-    </div>
-  </div>
-
-  <!-- ============================
-       12. 右下角悬浮联系按钮（选项D）
-       ============================ -->
-  <div class="contact-float">
-    <!-- 联系卡片（点击按钮后弹出） -->
-    <div class="contact-card" id="contactCard">
-      <p class="contact-card-title">添加客服微信</p>
-      <div class="contact-card-id">
-        <!-- 微信小图标 -->
-        <div class="contact-wechat-icon">
-          <svg viewBox="0 0 24 24"><path d="M8.5 13.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm5.5 2c1.5 0 2.8.5 3.8 1.3l-3.3 2.9c-.3.3-.8.4-1.2.3-.5-.2-1-.4-1.5-.6-.3.8-.9 1.5-1.6 2l-1.1-2c2-.5 4-.8 5.9-.8zM3 20l4.5-4c-.7-.8-1.1-1.8-1.1-3 0-2.2 1.8-4 4-4 .6 0 1.1.1 1.6.3L10 8.5C9 7.6 7.7 7 6.3 7 4.1 7 2.3 8.8 2.3 11c0 1.5.8 2.8 2.1 3.6L3 20z"/></svg>
-        </div>
-        <!-- 微信ID：把 "ABC" 改成你自己的微信号 -->
-        <span class="contact-id-text" id="wechatId">ABC</span>
-      </div>
-      <!-- 点击复制微信号 -->
-      <button class="contact-copy" id="copyBtn" onclick="copyWechat()">
-        <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-        复制微信号
-      </button>
-    </div>
-
-    <!-- 悬浮按钮本体 -->
-    <button class="contact-btn" id="contactBtn" onclick="toggleContact()">
-      <!-- 微信图标 SVG -->
-      <svg viewBox="0 0 24 24"><path d="M8.5 13.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm5.5 2c1.5 0 2.8.5 3.8 1.3l-3.3 2.9c-.3.3-.8.4-1.2.3-.5-.2-1-.4-1.5-.6-.3.8-.9 1.5-1.6 2l-1.1-2c2-.5 4-.8 5.9-.8zM3 20l4.5-4c-.7-.8-1.1-1.8-1.1-3 0-2.2 1.8-4 4-4 .6 0 1.1.1 1.6.3L10 8.5C9 7.6 7.7 7 6.3 7 4.1 7 2.3 8.8 2.3 11c0 1.5.8 2.8 2.1 3.6L3 20z"/></svg>
-    </button>
   </div>
 
 
@@ -1192,11 +1113,6 @@
             <h3 class="card-name">${shoe.name}</h3>
             <p class="card-price">${shoe.price}</p>
             <span class="card-category">${shoe.category}</span>
-            <!-- C. 卡片下方咨询购买按钮 -->
-            <button class="card-buy-btn" onclick="event.stopPropagation(); showWechatToast()">
-              <svg viewBox="0 0 24 24"><path d="M8.5 13.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm5.5 2c1.5 0 2.8.5 3.8 1.3l-3.3 2.9c-.3.3-.8.4-1.2.3-.5-.2-1-.4-1.5-.6-.3.8-.9 1.5-1.6 2l-1.1-2c2-.5 4-.8 5.9-.8zM3 20l4.5-4c-.7-.8-1.1-1.8-1.1-3 0-2.2 1.8-4 4-4 .6 0 1.1.1 1.6.3L10 8.5C9 7.6 7.7 7 6.3 7 4.1 7 2.3 8.8 2.3 11c0 1.5.8 2.8 2.1 3.6L3 20z"/></svg>
-              咨询购买
-            </button>
           </div>
         </div>
       `).join('');
@@ -1299,31 +1215,13 @@
        11.9 联系按钮功能
        ============================ */
 
-    // === D. 右下角悬浮按钮功能 ===
-    // 点击悬浮按钮，切换显示/隐藏联系卡片
-    function toggleContact() {
-      const card = document.getElementById('contactCard');
-      const bottomPopup = document.getElementById('bottomWechatPopup');
-      const navPopup = document.getElementById('navContactPopup');
-      // 关闭其他两个弹窗
-      bottomPopup.classList.remove('show');
-      navPopup.classList.remove('show');
-      card.classList.toggle('show'); // 添加或移除 .show 类
-    }
-
     // 点击页面其他地方，关闭所有联系弹窗
     document.addEventListener('click', (e) => {
-      const card = document.getElementById('contactCard');
-      const btn = document.getElementById('contactBtn');
       const navPopup = document.getElementById('navContactPopup');
       const navBtn = document.querySelector('.nav-contact');
       const bottomPopup = document.getElementById('bottomWechatPopup');
       const bottomWechat = document.querySelector('.bottom-bar-wechat');
 
-      // 如果点击的不是按钮也不是卡片内部，就关闭
-      if (!btn?.contains(e.target) && !card?.contains(e.target)) {
-        card?.classList.remove('show');
-      }
       if (!navBtn?.contains(e.target) && !navPopup?.contains(e.target)) {
         navPopup?.classList.remove('show');
       }
@@ -1332,24 +1230,28 @@
       }
     });
 
-    // 复制微信号功能（右下角）
+    // 复制微信号功能（弹窗内的复制按钮）
     function copyWechat() {
       const wechatId = document.getElementById('wechatId').textContent; // 读取微信号
       navigator.clipboard.writeText(wechatId).then(() => {
-        // 复制成功后显示"已复制"
-        const btn = document.getElementById('copyBtn');
-        btn.innerHTML = `
-          <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
-          已复制！
-        `;
-        btn.classList.add('copied');
+        // 复制成功后弹窗复制按钮显示"已复制"
+        const btn = document.querySelector('.modal-copy-btn');
+        if (btn) {
+          btn.innerHTML = `
+            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            已复制！
+          `;
+          btn.classList.add('copied');
+        }
         setTimeout(() => {
           // 3秒后恢复原样
-          btn.innerHTML = `
-            <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-            复制微信号
-          `;
-          btn.classList.remove('copied');
+          if (btn) {
+            btn.innerHTML = `
+              <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              复制微信号
+            `;
+            btn.classList.remove('copied');
+          }
         }, 3000);
       });
     }
@@ -1357,10 +1259,8 @@
     // === B. 顶部导航栏联系按钮功能 ===
     function toggleNavContact() {
       const popup = document.getElementById('navContactPopup');
-      const card = document.getElementById('contactCard');
       const bottomPopup = document.getElementById('bottomWechatPopup');
-      // 关闭其他两个弹窗
-      card.classList.remove('show');
+      // 关闭底部弹窗
       bottomPopup.classList.remove('show');
       popup.classList.toggle('show');
     }
@@ -1397,10 +1297,8 @@
 
     function toggleBottomWechat() {
       const popup = document.getElementById('bottomWechatPopup');
-      const card = document.getElementById('contactCard');
       const navPopup = document.getElementById('navContactPopup');
-      // 关闭其他两个弹窗
-      card.classList.remove('show');
+      // 关闭顶部弹窗
       navPopup.classList.remove('show');
       popup.classList.toggle('show');
     }
